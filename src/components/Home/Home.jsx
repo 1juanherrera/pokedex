@@ -21,7 +21,7 @@ const Home = () => {
         <div className='home-card'>
             <div className='home-card__container'>
             <h1>Hello Trainer!</h1>
-            <img className='home-card__img' src="/src/assets/ashPokemon.png" />
+            <img className='home-card__img' src="https://i.pinimg.com/originals/28/ec/d6/28ecd67d058708db6a65de3e88f2c9f6.png" />
             </div>
             <h2>Give me you name to start!</h2>
             <form onSubmit={ (e) => handleSubmit(e)}>
