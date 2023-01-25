@@ -1,0 +1,76 @@
+ul {
+    margin: 0;
+    margin-top: 80px;
+    display: grid;
+    gap: 2px;
+    grid-template-columns: repeat(4, 1fr);
+    margin-bottom: 100px;
+    z-index: 0;
+
+    @media(max-width: 768px){
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+    @media(max-width: 420px){
+        grid-template-columns: 1fr;
+        padding-left: 0;
+    }
+    
+    a {
+        text-decoration: none;
+    }
+
+    .pokemon-card {
+        padding: 7px;
+        height: 290px;
+        width: 310px;
+        display: flex;
+        position: relative;
+        border-radius: 30px;
+        color: #fff;
+        z-index: -5;
+        text-shadow: 1px 1px 2px black;
+        box-shadow: -10px -10px 15px rgb(58 58 58 / 9%), 10px 10px 15px rgb(66 66 66 / 35%);
+        margin: 25px;
+
+        @media(max-width: 768px){
+            height: 250px;
+            width: 290px;
+        }
+    
+        &__container {
+            margin-left: 10px;
+            margin-bottom: 20px;
+            text-decoration: none;
+    
+            h1 {
+                text-transform: capitalize;
+                text-decoration: none;
+            }
+
+            div {
+                background-color: rgba(255, 255, 255, 0.3);
+                border-radius: 20px;
+                padding: 3px 10px;
+                line-height: 16px;
+                align-self: flex-start;
+                text-transform: capitalize;
+                z-index: 5;
+                margin: 4px 4px 4px 4px;
+                width: 100px;
+            }
+        }
+    
+        &__img {
+            width: 200px;
+            height: 200px;
+            margin-top: 30px;
+            position: absolute;
+            right: -40px;
+            top: 40px;
+            z-index: 1;
+        }
+    }        
+    
+}
+

@@ -1,0 +1,70 @@
+.pokedex-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 100px;
+
+    &__titles {
+        height: 200px;
+        margin-top: 50px;
+        width: 75%;
+
+        h1 {
+            margin-top: 50px;
+            font-size: 60px;
+            font-weight: 800;
+
+            @media(max-width: 768px){
+                font-size: 45px;
+            }
+        }
+
+        h3 {
+            font-weight: 500;
+            font-size: 23px;
+
+            @media(max-width: 768px){
+                font-size: 16px;
+            }
+        }
+    }
+
+    button {
+        border: 0;
+        background: #6c79db;
+        color: #fff;
+        box-shadow: 2px 2px 8px grey;
+        font-size: 1.1rem;
+        font-weight: 700;
+        border-radius: 50%;
+        width: 40px;
+        height: 40px;
+        margin: 3px;
+        cursor: pointer;
+        outline: 0
+    }
+
+    select {
+        margin-top: 30px;
+        border: none;
+        border-radius: 30px;
+        outline: none;
+        font-size: 20px;
+        width: 500px;
+        color: grey;           
+        box-shadow: -10px -10px 15px rgb(58 58 58 / 9%), 10px 10px 15px rgb(66 66 66 / 35%);
+        transition: .5s;
+        padding: 16px 150px 18px 15px;
+
+        @media(max-width: 768px){
+            width: 250px;
+            font-size: 14px;
+            height: 50px;
+            margin-right: 180px;
+        }
+        @media(max-width: 420px){
+            margin-left: 160px;
+        }
+    }
+}
