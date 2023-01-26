@@ -4,7 +4,12 @@
     align-items: center;
     flex-direction: column;
     margin-bottom: 100px;
+    margin-right: 80px;
 
+    @media(max-width:420px){
+        width: 420px;
+        margin: 0 auto;
+    }
     &__titles {
         height: 200px;
         margin-top: 50px;
@@ -28,21 +33,6 @@
                 font-size: 16px;
             }
         }
-    }
-
-    button {
-        border: 0;
-        background: #6c79db;
-        color: #fff;
-        box-shadow: 2px 2px 8px grey;
-        font-size: 1.1rem;
-        font-weight: 700;
-        border-radius: 50%;
-        width: 40px;
-        height: 40px;
-        margin: 3px;
-        cursor: pointer;
-        outline: 0
     }
 
     select {

@@ -1,6 +1,7 @@
 import axios from "axios"
 import { useState, useEffect } from "react"
 import PokemonCard from "../PokemonCard/PokemonCard"
+import Pagination from '../Pagination/Pagination'
 import { useSelector } from "react-redux"
 import './_Pokedex.scss'
 
@@ -10,8 +11,11 @@ const Pokedex = () => {
 
     const [ types, setTypes ] = useState([])
     const [ pokemons, setPokemons ] = useState([])
- 
-    
+    const [ page, setPage] = useState(1)
+    const [ forPage, setForPage ] = useState(16)
+
+    const totalPages = Math.ceil(pokemons.length / forPage)
+
     useEffect(()=> {
         axios
             .get('https://pokeapi.co/api/v2/type')
@@ -29,23 +33,8 @@ const Pokedex = () => {
 
     axios
         .get(url)
-        .then(res => {
-            setPokemons(res.data.pokemon)
-            setPage(1)
-        })
+        .then(res => setPokemons(res.data.pokemon))
         .catch(error => console.error(error))
-   }
-
-   const [ page, setPage ] = useState(1)
-   const PokemonsPerPage = 16
-   const lastIndex = page * PokemonsPerPage
-   const firstIndex = lastIndex - PokemonsPerPage
-   const pokemonsPaginated = pokemons?.slice( firstIndex, lastIndex )
-   const totalPages = Math.ceil(pokemons.length / PokemonsPerPage )
-   const pagesNumbers = []
-
-   for(let i = 1; i <= totalPages; i++){
-        pagesNumbers.push(i)
    }
 
     return (
@@ -63,7 +52,9 @@ const Pokedex = () => {
             </select>
                 <ul>
                     {
-                        pokemonsPaginated.map((item, index) => (
+                        pokemons.slice((page -1) * forPage, 
+                        (page - 1) * forPage + forPage)
+                        .map((item, index) => (
                             <PokemonCard 
                             url={item.pokemon ? item.pokemon.url : item.url}
                             key={index}
@@ -71,18 +62,7 @@ const Pokedex = () => {
                         ))
                     }
                 </ul>
-                <div>
-                {
-                pagesNumbers.map(num=> (
-                    <button 
-                    key={num}
-                    onClick={() => setPage(num)}>{num}</button>
-                ))
-                }
-            <button 
-            disabled={page === totalPages}
-            onClick={() => setPage(page + 1)}><i class='bx bx-right-arrow-alt'></i></button>
-                </div>
+                <Pagination page={page} setPage={setPage} totalPages={totalPages} />
         </div>
     )
 }

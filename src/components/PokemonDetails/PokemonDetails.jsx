@@ -1,17 +1,17 @@
 import axios from "axios"
 import { useState, useEffect } from "react"
 import { useParams, Link } from "react-router-dom"
-import ValidateColor from "../../Js/validateColor"
+import ValidateColor from "../../data/validateColor"
 import './_PokemonDetails.scss'
 
 const PokemonDetails = () => {
-    const { name } = useParams()
+    const { id } = useParams()
     const [ data, setData ] = useState({})
     const [type, setType] = useState('');
         
     useEffect(() => {
         axios   
-            .get(`https://pokeapi.co/api/v2/pokemon/${name}/`)
+            .get(`https://pokeapi.co/api/v2/pokemon/${id}/`)
             .then(res => {setData({
                 name: res.data.name,
                 image: res.data?.sprites.other['official-artwork']?.front_default,
@@ -29,7 +29,7 @@ const PokemonDetails = () => {
             })
             setType(res.data.types[0].type.name)
         })
-    }, [name])
+    }, [id])
 
     document.body.style = `background: ${ValidateColor(type)}`
 

@@ -1,0 +1,26 @@
+.pagination-container {
+    display: flex;
+    
+    button {
+        border: 0;
+        background: #6c79db;
+        color: #fff;
+        box-shadow: 2px 2px 8px grey;
+        font-weight: 700;
+        border-radius: 50%;
+        width: 45px;
+        height: 45px;
+        margin: 3px;
+        cursor: pointer;
+        outline: 0;
+        font-size: 2rem;
+    }
+
+    button:disabled{
+        background-color: grey;
+    }
+
+    input {
+        width: 30px;
+    }
+}

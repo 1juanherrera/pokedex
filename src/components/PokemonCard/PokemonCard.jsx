@@ -2,7 +2,7 @@ import axios from "axios"
 import { useState, useEffect } from "react"
 import { Link } from "react-router-dom";
 import './_PokemonCard.scss'
-import ValidateColor from "../../Js/validateColor"
+import ValidateColor from "../../data/validateColor"
 
 const PokemonCard = ({url}) => {
 
@@ -29,7 +29,7 @@ const PokemonCard = ({url}) => {
     document.body.style = "background: #fff"
 
   return(
-    <Link to={`/pokedex/${pokemon?.name}`}>
+    <Link to={`/pokedex/${pokemon?.id}`}>
      <div className="pokemon-card" style={{background: ValidateColor(type)}}>
         <div className="pokemon-card__container">
         
