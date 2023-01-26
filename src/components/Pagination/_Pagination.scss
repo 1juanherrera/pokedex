@@ -1,5 +1,8 @@
 .pagination-container {
+    margin: 0 auto;
     display: flex;
+    justify-content: center;
+    align-items: center;
     
     button {
         border: 0;
@@ -14,13 +17,26 @@
         cursor: pointer;
         outline: 0;
         font-size: 2rem;
+        margin: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 
     button:disabled{
         background-color: grey;
     }
 
+    p {
+        margin-left: 5px;
+        font-size: 1rem;
+        font-weight: 500;
+    }
+
     input {
         width: 30px;
+        height: 20px;
+        font-weight: 400;
+        font-size: 1rem;
     }
 }
