@@ -76,10 +76,7 @@ const Pokedex = () => {
                 pagesNumbers.map(num=> (
                     <button 
                     key={num}
-                    onClick={() => setPage(num)}
-                    >
-                        {num}
-                    </button>
+                    onClick={() => setPage(num)}>{num}</button>
                 ))
                 }
             <button 
