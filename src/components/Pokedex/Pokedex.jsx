@@ -40,11 +40,8 @@ const Pokedex = () => {
    const PokemonsPerPage = 16
    const lastIndex = page * PokemonsPerPage
    const firstIndex = lastIndex - PokemonsPerPage
-
    const pokemonsPaginated = pokemons?.slice( firstIndex, lastIndex )
-
    const totalPages = Math.ceil(pokemons.length / PokemonsPerPage )
-
    const pagesNumbers = []
 
    for(let i = 1; i <= totalPages; i++){

@@ -22,7 +22,7 @@ ul {
 
     .pokemon-card {
         padding: 7px;
-        height: 230px;
+        height: 235px;
         width: 250px;
         display: flex;
         position: relative;
@@ -31,8 +31,9 @@ ul {
         z-index: -5;
         text-shadow: 1px 1px 2px black;
         box-shadow: -10px -10px 15px rgb(58 58 58 / 9%), 10px 10px 15px rgb(66 66 66 / 35%);
-        margin: 25px;
-        padding: 10px;
+        margin: 20px;
+        padding: 5px;
+        position: relative;
 
         @media(max-width: 768px){
             height: 250px;
@@ -42,11 +43,14 @@ ul {
         &__container {
             margin-left: 10px;
             text-decoration: none;
+            position: absolute;
     
             h1 {
                 text-transform: capitalize;
                 text-decoration: none;
                 margin-bottom: 0;
+                font-size: 1.5rem;
+                margin-top: 10px;
             }
 
             div {
