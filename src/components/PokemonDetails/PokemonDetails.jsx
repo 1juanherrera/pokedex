@@ -77,25 +77,25 @@ const PokemonDetails = () => {
                 <h1>Stats base</h1>
                 <h4>HP</h4>
                 <div class="progress">
-                    <div class="progress-bar" style={{width: data.hp*4.1}}>
+                    <div class="progress-bar" style={{width: data.hp*2.4}}>
                         <span class="progress-text">{data.hp}/200</span>
                     </div>
                 </div>
                 <h4>Speed</h4>
                 <div class="progress">
-                    <div class="progress-bar" style={{width: data.speed*4.1}}>
+                    <div class="progress-bar" style={{width: data.speed*2.4}}>
                         <span class="progress-text">{data.speed}/200</span>
                     </div>
                 </div>
                 <h4>Attack</h4>
                 <div class="progress">
-                    <div class="progress-bar" style={{width: data.attack*4.1}}>
+                    <div class="progress-bar" style={{width: data.attack*2.4}}>
                         <span class="progress-text">{data.attack}/200</span>
                     </div>
                 </div>
                 <h4>Defense</h4>
                 <div class="progress">
-                    <div class="progress-bar" style={{width: data.defense*4.1}}>
+                    <div class="progress-bar" style={{width: data.defense*2.4}}>
                         <span class="progress-text">{data.defense}/200</span>
                     </div>
                 </div>
