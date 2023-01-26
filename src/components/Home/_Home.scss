@@ -28,7 +28,7 @@
         h1 {
             margin-top: 160px;
             font-weight: 800;
-            font-size: 45px;
+            font-size: 2rem;
             position: absolute;
             margin-right: 10px;
 
@@ -48,8 +48,8 @@
     }
 
     &__img {
-        width: 200px;
-        height: 450px;
+        width: 10em;
+        height: 20em;
         margin-left: 290px;
 
         @media(max-width: 768px){
@@ -64,9 +64,8 @@
     }
 
     h2 {
-        font-size: 26px;
+        font-size: 1.5em;
         font-weight: 600;
-        margin-right: 100px;
 
         @media(max-width: 420px){
             font-size: 20px;
@@ -85,7 +84,6 @@
     form {
         margin-top: 20px;
         position: relative;
-        margin-right: 100px;
 
         input {
             border: none;
@@ -95,7 +93,7 @@
             color: grey;
             box-shadow: -10px -10px 15px rgb(58 58 58 / 9%), 10px 10px 15px rgb(66 66 66 / 35%);
             transition: .5s;
-            padding: 16px 150px 18px 15px;
+            padding: 8px 90px 15px 15px;
 
             @media(max-width: 420px){
                 width: 150px;
@@ -115,8 +113,8 @@
             cursor: pointer;
             border: none;
             border-radius: 50%;
-            width: 60px;
-            height: 60px;
+            width: 48px;
+            height: 48px;
             position: absolute;
             right: 0;
 

@@ -1,5 +1,5 @@
 .pokemon-detail {
-    width: 1000px;
+    width: 800px;
     margin: 0 auto;
 
     @media(max-width: 768px){
@@ -30,7 +30,7 @@
 
 
         img {
-            width: 300px;
+            width: 14rem;
             margin-bottom: 120px;
 
             @media(max-width: 768px){
@@ -51,7 +51,7 @@
         width: 100%;
 
         img {
-            width: 400px;
+            width: 23rem;
             position: absolute;
             top: -210px;
 
@@ -191,16 +191,17 @@
                 display: flex;
                 align-items: center;
                 border-radius: 5px; 
-                width: 10%;
+                text-align: center;
+                width: 100%;
 
                 .progress-text {
                     margin-left: 10px;
                     font-weight: bold;
                     color: #fff;
                     text-shadow: 2px 2px 3px black;
+                    text-align: center;
                     width: 100%;
                     position: absolute;
-                    text-align: center;
                 }
             }
         }
