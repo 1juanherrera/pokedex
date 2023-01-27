@@ -30,7 +30,9 @@ const PokemonCard = ({url}) => {
 
   return(
     <Link to={`/pokedex/${pokemon?.id}`}>
-     <div className="pokemon-card" style={{background: ValidateColor(type)}}>
+     <div
+      className="pokemon-card" 
+      style={{background: ValidateColor(type)}}>
         <div className="pokemon-card__container">
         
         <h1>{pokemon.name}</h1>
@@ -49,7 +51,7 @@ const PokemonCard = ({url}) => {
             <div><b>defense:</b> {pokemon.defense}</div>
             <div><b>speed:</b> {pokemon.speed}</div>
         </div>
-          <img className="pokemon-card__img" src={pokemon.image} alt="" /> 
+            <img className="pokemon-card__img" src={pokemon.image} alt="" /> 
       </div>
       </Link>
     )

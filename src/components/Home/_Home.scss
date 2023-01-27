@@ -94,7 +94,7 @@
             color: grey;
             box-shadow: -10px -10px 15px rgb(58 58 58 / 9%), 10px 10px 15px rgb(66 66 66 / 35%);
             transition: .5s;
-            padding: 8px 90px 15px 15px;
+            padding: 15px 90px 15px 15px;
 
             @media(max-width: 420px){
                 width: 150px;
@@ -114,8 +114,8 @@
             cursor: pointer;
             border: none;
             border-radius: 50%;
-            width: 48px;
-            height: 48px;
+            width: 54px;
+            height: 54px;
             position: absolute;
             right: 0;
 

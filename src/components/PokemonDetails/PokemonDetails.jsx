@@ -1,4 +1,5 @@
 import axios from "axios"
+import { motion } from "framer-motion"
 import { useState, useEffect } from "react"
 import { useParams, Link } from "react-router-dom"
 import ValidateColor from "../../data/validateColor"
@@ -34,7 +35,12 @@ const PokemonDetails = () => {
     document.body.style = `background: ${ValidateColor(type)}`
 
     return (
-        <div className="pokemon-detail">
+        <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ delay: 0.2, duration: 0.5 }}
+        whileInView={{y: [-50, 0], opacity: 1}}
+        className="pokemon-detail">
             <Link to='/pokedex'>
                 <button><i class='bx bx-left-arrow-alt'></i></button>
             </Link>
@@ -57,7 +63,9 @@ const PokemonDetails = () => {
                     {
                         data.type?.map((res) => {
                             return (
-                                <div style={{background: ValidateColor(res.type.name)}} key={res.slot}>{res.type.name}</div>
+                                <motion.div
+                                whileHover={{scale: 1.1}}
+                                style={{background: ValidateColor(res.type.name)}} key={res.slot}>{res.type.name}</motion.div>
                             )
                         })
                     }
@@ -67,7 +75,9 @@ const PokemonDetails = () => {
                     {
                         data.ability?.map((res) => {
                             return (
-                                <div key={res.slot}>{res.ability.name}</div>
+                                <motion.div 
+                                whileHover={{ scale: 1.1 }}
+                                key={res.slot}>{res.ability.name}</motion.div>
                             )
                         })
                     }
@@ -78,25 +88,25 @@ const PokemonDetails = () => {
                 <h4>HP</h4>
                 <div class="progress">
                     <div class="progress-bar" style={{width: data.hp*2.4}}>
-                        <span class="progress-text">{data.hp}/200</span>
+                        <span class="progress-text">{data.hp}pts</span>
                     </div>
                 </div>
                 <h4>Speed</h4>
                 <div class="progress">
                     <div class="progress-bar" style={{width: data.speed*2.4}}>
-                        <span class="progress-text">{data.speed}/200</span>
+                        <span class="progress-text">{data.speed}pts</span>
                     </div>
                 </div>
                 <h4>Attack</h4>
                 <div class="progress">
                     <div class="progress-bar" style={{width: data.attack*2.4}}>
-                        <span class="progress-text">{data.attack}/200</span>
+                        <span class="progress-text">{data.attack}pts</span>
                     </div>
                 </div>
                 <h4>Defense</h4>
                 <div class="progress">
                     <div class="progress-bar" style={{width: data.defense*2.4}}>
-                        <span class="progress-text">{data.defense}/200</span>
+                        <span class="progress-text">{data.defense}pts</span>
                     </div>
                 </div>
             </div>
@@ -105,12 +115,14 @@ const PokemonDetails = () => {
             {
                 data.movements?.map((res) => {
                     return (
-                        <div key={res.slot}>{res.move.name}</div>
+                        <motion.div
+                        whileHover={{scale: 1.1 }}
+                        key={res.slot}>{res.move.name}</motion.div>
                     )
                 })
             }
             </div>
-        </div>
+        </motion.div>
     )
 }
 

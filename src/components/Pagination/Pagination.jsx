@@ -1,3 +1,4 @@
+import { motion } from 'framer-motion'
 import { useState } from 'react'
 import './_Pagination.scss'
 
@@ -40,16 +41,19 @@ const Pagination = ({page, setPage, totalPages}) => {
 
     return (
         <div className='pagination-container'>
-            <button disabled={page == 1 || page < 1} onClick={previousPage}><i class='bx bx-left-arrow-alt'></i></button>
+            <motion.button 
+            whileHover={{ scale: 1.1 }}
+            disabled={page == 1 || page < 1} onClick={previousPage}><i class='bx bx-left-arrow-alt'></i></motion.button>
             <input 
             onChange={(e) => onChange(e)}
             onKeyDown={(e) => onkeyDown(e)} 
             name='page' 
             autoComplete='off' value={input}/>
             <p>de {totalPages}</p>
-            <button 
+            <motion.button 
+            whileHover={{ scale: 1.1 }}
             disabled={page == Math.ceil(totalPages) || page > totalPages} 
-            onClick={nextPage}><i class='bx bx-right-arrow-alt' ></i></button>
+            onClick={nextPage}><i class='bx bx-right-arrow-alt' ></i></motion.button>
         </div>
     )
 }   

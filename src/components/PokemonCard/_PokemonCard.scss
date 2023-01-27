@@ -18,10 +18,15 @@ ul {
     
     a {
         text-decoration: none;
+        object-fit: cover;
+        transition: 0.5s;
+    }
+
+    a:hover {
+        transform: scale(1.1);
     }
 
     .pokemon-card {
-        padding: 7px;
         height: 235px;
         width: 250px;
         display: flex;
@@ -31,7 +36,7 @@ ul {
         z-index: -5;
         text-shadow: 1px 1px 2px black;
         box-shadow: -10px -10px 15px rgb(58 58 58 / 9%), 10px 10px 15px rgb(66 66 66 / 35%);
-        margin: 20px;
+        margin: 30px;
         padding: 5px;
         position: relative;
 
