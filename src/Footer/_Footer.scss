@@ -1,0 +1,40 @@
+.footer {
+    margin-top: 160px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+    color: grey;
+
+    &__made-by {
+        margin-right: 40px;
+    }
+
+    &__table {
+        height: 3px;
+        background-color: grey;
+        width: 55px;
+        border-radius: 5px;
+        margin-right: 5px;
+    }
+
+    &__follow-me {
+        margin-right: 6px;
+    }
+
+    &__github-icon {
+        font-size: 24px;
+        color: grey;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-decoration: none;
+    }
+
+    b {
+        font-size: 1rem;
+    }
+}
+
+
+
