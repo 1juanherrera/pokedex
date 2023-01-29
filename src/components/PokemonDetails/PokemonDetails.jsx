@@ -42,7 +42,7 @@ const PokemonDetails = () => {
         whileInView={{y: [-50, 0], opacity: 1}}
         className="pokemon-detail">
             <Link to='/pokedex'>
-                <button><i class='bx bx-left-arrow-alt'></i></button>
+                <button><i className='bx bx-left-arrow-alt'></i></button>
             </Link>
             <div className="pokemon-detail__container">
                 <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/International_Pok%C3%A9mon_logo.svg/2560px-International_Pok%C3%A9mon_logo.svg.png"/>
@@ -86,27 +86,27 @@ const PokemonDetails = () => {
             <div className="pokemon-detail__column">
                 <h1>Stats base</h1>
                 <h4>HP</h4>
-                <div class="progress">
-                    <div class="progress-bar" style={{width: data.hp*2.4}}>
-                        <span class="progress-text">{data.hp}pts</span>
+                <div className="progress">
+                    <div className="progress-bar" style={{width: data.hp*2.4}}>
+                        <span className="progress-text">{data.hp}pts</span>
                     </div>
                 </div>
                 <h4>Speed</h4>
-                <div class="progress">
-                    <div class="progress-bar" style={{width: data.speed*2.4}}>
-                        <span class="progress-text">{data.speed}pts</span>
+                <div className="progress">
+                    <div className="progress-bar" style={{width: data.speed*2.4}}>
+                        <span className="progress-text">{data.speed}pts</span>
                     </div>
                 </div>
                 <h4>Attack</h4>
-                <div class="progress">
-                    <div class="progress-bar" style={{width: data.attack*2.4}}>
-                        <span class="progress-text">{data.attack}pts</span>
+                <div className="progress">
+                    <div className="progress-bar" style={{width: data.attack*2.4}}>
+                        <span className="progress-text">{data.attack}pts</span>
                     </div>
                 </div>
                 <h4>Defense</h4>
-                <div class="progress">
-                    <div class="progress-bar" style={{width: data.defense*2.4}}>
-                        <span class="progress-text">{data.defense}pts</span>
+                <div className="progress">
+                    <div className="progress-bar" style={{width: data.defense*2.4}}>
+                        <span className="progress-text">{data.defense}pts</span>
                     </div>
                 </div>
             </div>

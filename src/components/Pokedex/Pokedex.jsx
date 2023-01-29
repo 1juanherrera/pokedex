@@ -6,6 +6,7 @@ import { useSelector } from "react-redux"
 import './_Pokedex.scss'
 import { motion } from "framer-motion"
 
+
 const Pokedex = () => {
 
     const name = useSelector( state => state.username )
@@ -71,7 +72,8 @@ const Pokedex = () => {
                         ))
                     }
                 </motion.ul>
-                <Pagination page={page} setPage={setPage} totalPages={totalPages} />
+                <Pagination
+                page={page} setPage={setPage} totalPages={totalPages} />
         </motion.div>
     )
 }
