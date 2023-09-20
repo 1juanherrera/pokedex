@@ -21,6 +21,11 @@
         display: flex;
         justify-content: center;
         align-items: center;   
+
+        @media(max-width: 420px){
+            width: 40px;
+            height: 40px;
+        }
     }
 
     button:disabled{
