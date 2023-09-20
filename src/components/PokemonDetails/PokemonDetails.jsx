@@ -4,7 +4,7 @@ import { useState, useEffect } from "react"
 import { useParams, Link } from "react-router-dom"
 import ValidateColor from "../../data/validateColor"
 import './_PokemonDetails.scss'
-import Exit from "../Exit/EXit"
+import { IoMdExit } from 'react-icons/io';
 
 const PokemonDetails = () => {
     const { id } = useParams()
@@ -36,6 +36,7 @@ const PokemonDetails = () => {
     document.body.style = `background: ${ValidateColor(type)}`
 
     return (
+        <>
         <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
@@ -46,7 +47,6 @@ const PokemonDetails = () => {
                 <Link to='/pokedex'>
                     <button><i className='bx bx-left-arrow-alt'></i></button>
                 </Link>
-                <Exit />
             </div>
             <div className="pokemon-detail__container">
                 <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/International_Pok%C3%A9mon_logo.svg/2560px-International_Pok%C3%A9mon_logo.svg.png"/>
@@ -65,11 +65,11 @@ const PokemonDetails = () => {
             <div className="container__type">
                 <h1>Type</h1>
                     {
-                        data.type?.map((res) => {
+                        data.type?.map((res, i) => {
                             return (
                                 <motion.div
                                 whileHover={{scale: 1.1}}
-                                style={{background: ValidateColor(res.type.name)}} key={res.slot}>{res.type.name}</motion.div>
+                                style={{background: ValidateColor(res.type.name)}} key={i}>{res.type.name}</motion.div>
                             )
                         })
                     }
@@ -77,11 +77,11 @@ const PokemonDetails = () => {
             <div className="container__ability">
                 <h1>Ability</h1>
                     {
-                        data.ability?.map((res) => {
+                        data.ability?.map((res, i) => {
                             return (
                                 <motion.div 
                                 whileHover={{ scale: 1.1 }}
-                                key={res.slot}>{res.ability.name}</motion.div>
+                                key={i}>{res.ability.name}</motion.div>
                             )
                         })
                     }
@@ -117,16 +117,22 @@ const PokemonDetails = () => {
             <div className="pokemon-detail__movements">
                 <h1>Movements</h1>
             {
-                data.movements?.map((res) => {
+                data.movements?.map((res, i) => {
                     return (
                         <motion.div
                         whileHover={{scale: 1.1 }}
-                        key={res.slot}>{res.move.name}</motion.div>
+                        key={i}>{res.move.name}</motion.div>
                     )
                 })
             }
             </div>
         </motion.div>
+        <Link to='/'>
+            <button className="pokemon-detail__button">
+                <IoMdExit />
+            </button>
+        </Link>
+        </>
     )
 }
 

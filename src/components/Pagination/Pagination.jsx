@@ -3,7 +3,7 @@ import { useState } from 'react'
 import './_Pagination.scss'
 
 
-const Pagination = ( {page, setPage, totalPages}) => {
+const Pagination = ({ page, setPage, totalPages }) => {
 
     const [ input, setInput ] = useState(1)
 
@@ -36,6 +36,7 @@ const Pagination = ( {page, setPage, totalPages}) => {
 
     const onChange = (e) => {
         setInput(Number(e.target.value))
+        setPage(Number(e.target.value))
     }
 
     return (
@@ -48,7 +49,7 @@ const Pagination = ( {page, setPage, totalPages}) => {
             onKeyDown={(e) => onkeyDown(e)} 
             name='page' 
             autoComplete='off' 
-            value={input}/>
+            value={page}/>
             <p>de {totalPages}</p>
             <motion.button 
             whileHover={{ scale: 1.1 }}

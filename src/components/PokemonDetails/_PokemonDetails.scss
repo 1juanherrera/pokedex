@@ -218,7 +218,7 @@
         flex-wrap: wrap;
         border-radius: 10px;
         background-color: #fff;
-        margin-bottom: 100px;
+        margin-bottom: 50px;
         width: 100%;
 
         h1 {
@@ -236,5 +236,22 @@
             text-shadow: 1px 1px 1px 2px black;
             font-weight: 500;
         }
+    }
+
+    &__button {
+        position: fixed;
+        bottom: 20px;
+        right: 40px;
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        background: red;
+        opacity: 0.9;
+        border: none;
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 30px;
     }
 }

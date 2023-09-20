@@ -68,7 +68,8 @@
             border-radius: 30px;
             outline: none;
             font-size: 20px;
-            color: grey;
+            color: black;
+            background: lightgrey;
             box-shadow: -10px -10px 15px rgb(58 58 58 / 9%), 10px 10px 15px rgb(66 66 66 / 35%);
             transition: .5s;
             padding: 15px 90px 15px 15px;
@@ -91,22 +92,19 @@
             height: 54px;
             position: absolute;
             right: 0;
+            color: white;
+            font-size: 2rem;
 
             @media(max-width: 768px){
                 width: 45px;
                 height: 45px;
             }
 
-            .icon {
-                color: #fff;
-                width: 30px;
-                height: 30px;
-                margin-top: 2px;
-                margin-left: -2px;
-
-                @media(max-width: 768px){
-                    width: 23px;
-                }
+            svg {
+                position: relative;
+                top: 5px;
+                right: 1.5px;
+                
             }
         }
     }

@@ -39,19 +39,19 @@ const Pokedex = () => {
         .get(url)
         .then(res => setPokemons(res.data.pokemon))
         .catch(error => console.error(error))
+
+    setPage(1)
    }
 
+   console.log(pokemons)
+
     return (
+        <>
         <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 0.2, duration: 0.2 }}
         className="pokedex-container">
-            <div className="pokedex-container__exit">
-                <Link to='/'>
-                        <button><IoMdExit /></button>
-                </Link>
-            </div>
             <div className="pokedex-container__titles">
             <h1>Pokedex</h1>
             <h3>Welcome {name}, here you can find your favorite pokemon!</h3>
@@ -82,6 +82,12 @@ const Pokedex = () => {
                 <Pagination
                 page={page} setPage={setPage} totalPages={totalPages} />
         </motion.div>
+                <Link to='/'>
+                        <button className="pokedex-container__button">
+                            <IoMdExit />
+                        </button>
+                </Link>
+        </>
     )
 }
 

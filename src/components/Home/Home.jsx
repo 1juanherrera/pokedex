@@ -4,6 +4,7 @@ import { changeName } from '../../store/slices/username.slice'
 import { RiSendPlaneFill } from "react-icons/ri";
 import './_Home.scss'
 import { motion } from 'framer-motion';
+import Footer from '../Footer/Footer';
 
 const Home = () => {
 
@@ -34,8 +35,9 @@ const Home = () => {
             <h2>Give me you name to start!</h2>
             <form onSubmit={ (e) => handleSubmit(e)}>
                 <input type="text" />
-                <button><RiSendPlaneFill className='icon'/></button>
+                <button className='icon'><RiSendPlaneFill /></button>
             </form>
+            <Footer />
         </motion.div>
     )
 }

@@ -2,7 +2,6 @@ ul {
     margin: 0;
     margin-top: 80px;
     display: grid;
-    gap: 1px;
     grid-template-columns: repeat(4, 1fr);
     margin-bottom: 100px;
     z-index: 0;
@@ -11,9 +10,13 @@ ul {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
     }
-    @media(max-width: 420px){
-        grid-template-columns: 1fr;
-        padding-left: 0;
+
+    @media(max-width: 26.25rem){
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        padding: 0;
     }
     
     a {
@@ -43,6 +46,10 @@ ul {
         @media(max-width: 768px){
             height: 250px;
             width: 290px;
+        }
+
+        @media(max-width: 420px){
+            margin: 0 0 30px 0;
         }
     
         &__container {

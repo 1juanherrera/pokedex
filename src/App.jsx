@@ -3,7 +3,6 @@ import PokemonDetails from './components/PokemonDetails/PokemonDetails'
 import ProtectedRoutes from './components/ProtectedRoutes/ProtectedRoutes'
 import Pokedex from './components/Pokedex/Pokedex'
 import Home from './components/Home/Home'
-import Footer from './components/Footer/Footer'
 import './App.css'
 
 
@@ -24,7 +23,6 @@ const App = () => {
       <Route/>
 
       </Routes>
-      <Footer />
     </HashRouter>
   )
 }
