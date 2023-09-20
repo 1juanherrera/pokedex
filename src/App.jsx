@@ -5,6 +5,7 @@ import Pokedex from './components/Pokedex/Pokedex'
 import Home from './components/Home/Home'
 import Footer from './components/Footer/Footer'
 import './App.css'
+import Exit from './components/Exit/EXit'
 
 
 const App = () => {
@@ -13,9 +14,9 @@ const App = () => {
     <HashRouter>
       <div className="pokeball-background"></div>
       <Routes>
-
+      
       <Route path='/' element={<Home />}/>
-
+      
         <Route element={<ProtectedRoutes />} >
         <Route path='/pokedex' element={<Pokedex />}/>
         <Route path='/pokedex/:id' element={<PokemonDetails />}/>

@@ -3,39 +3,39 @@ import { useState } from 'react'
 import './_Pagination.scss'
 
 
-const Pagination = ({page, setPage, totalPages}) => {
+const Pagination = ( {page, setPage, totalPages}) => {
 
     const [ input, setInput ] = useState(1)
 
     const nextPage = () => {
-        setInput(parseInt(input) + 1)
-        setPage(parseInt(page) + 1)
+        setInput(Number(input) + 1)
+        setPage(Number(page) + 1)
     }
 
     const previousPage = () => {
-        setInput(parseInt(input) - 1)
-        setPage(parseInt(page) - 1)
+        setInput(Number(input) - 1)
+        setPage(Number(page) - 1)
     }
 
     const onkeyDown = (e) => {
-        if(e.keyCode == 13){
-            setPage(parseInt(e.target.value))
+        if(e.keyCode === 13){
+            setPage(Number(e.target.value))
 
             if(
-            parseInt(e.target.value < 1) || 
-            parseInt(e.target.value) > Math.ceil(totalPages) || 
-            isNaN(parseInt(e.target.value))
+            Number(e.target.value < 1) || 
+            Number(e.target.value) > Math.ceil(totalPages) || 
+            isNaN(Number(e.target.value))
             ){
                 setPage(1)
                 setInput(1)
             }else {
-                setPage(parseInt(e.target.value))
+                setPage(Number(e.target.value))
             }
         }
     }
 
     const onChange = (e) => {
-        setInput(parseInt(e.target.value))
+        setInput(Number(e.target.value))
     }
 
     return (

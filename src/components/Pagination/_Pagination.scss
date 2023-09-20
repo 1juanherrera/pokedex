@@ -36,7 +36,11 @@
     input {
         width: 30px;
         height: 20px;
-        font-weight: 400;
+        font-weight: 500;
         font-size: 1rem;
+        border: 1px solid grey;
+        border-radius: 5px;  
+        cursor: pointer;
+        text-align: center;
     }
 }

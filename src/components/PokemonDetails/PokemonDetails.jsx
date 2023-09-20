@@ -4,6 +4,7 @@ import { useState, useEffect } from "react"
 import { useParams, Link } from "react-router-dom"
 import ValidateColor from "../../data/validateColor"
 import './_PokemonDetails.scss'
+import Exit from "../Exit/EXit"
 
 const PokemonDetails = () => {
     const { id } = useParams()
@@ -41,9 +42,12 @@ const PokemonDetails = () => {
         transition={{ delay: 0.2, duration: 0.5 }}
         whileInView={{y: [-50, 0], opacity: 1}}
         className="pokemon-detail">
-            <Link to='/pokedex'>
-                <button><i className='bx bx-left-arrow-alt'></i></button>
-            </Link>
+            <div className="pokemon-detail__links">
+                <Link to='/pokedex'>
+                    <button><i className='bx bx-left-arrow-alt'></i></button>
+                </Link>
+                <Exit />
+            </div>
             <div className="pokemon-detail__container">
                 <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/International_Pok%C3%A9mon_logo.svg/2560px-International_Pok%C3%A9mon_logo.svg.png"/>
             </div>

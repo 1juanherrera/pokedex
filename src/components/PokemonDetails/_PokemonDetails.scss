@@ -11,6 +11,12 @@
         flex-direction: column;
         margin-top: 200px;
     }
+
+    &__links {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
     
     button {
         background: none;

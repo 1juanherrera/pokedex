@@ -10,9 +10,31 @@
         width: 420px;
         margin: 0 auto;
     }
+
+    &__exit {
+        width: 85%;
+        margin-top: 20px;
+        display: flex;
+        justify-content: end;
+        align-items: center;
+
+        button {
+            width: 50px;
+            height: 50px;
+            background: gray;
+            display: flex;
+            border-radius: 50%;
+            border: none;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 30px;
+            color: white;
+        }
+    }
+
     &__titles {
         height: 200px;
-        margin-top: 50px;
         width: 75%;
 
         h1 {

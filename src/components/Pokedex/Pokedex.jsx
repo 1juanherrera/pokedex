@@ -5,6 +5,8 @@ import Pagination from '../Pagination/Pagination'
 import { useSelector } from "react-redux"
 import './_Pokedex.scss'
 import { motion } from "framer-motion"
+import { Link } from "react-router-dom"
+import { IoMdExit } from 'react-icons/io';
 
 
 const Pokedex = () => {
@@ -45,6 +47,11 @@ const Pokedex = () => {
         animate={{ opacity: 1 }}
         transition={{ delay: 0.2, duration: 0.2 }}
         className="pokedex-container">
+            <div className="pokedex-container__exit">
+                <Link to='/'>
+                        <button><IoMdExit /></button>
+                </Link>
+            </div>
             <div className="pokedex-container__titles">
             <h1>Pokedex</h1>
             <h3>Welcome {name}, here you can find your favorite pokemon!</h3>

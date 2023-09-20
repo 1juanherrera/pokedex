@@ -18,6 +18,8 @@ const Home = () => {
         navigate('/pokedex')
     }
 
+    document.body.style = 'background: white'
+
     return (
         <motion.div
         whileInView={{x: [-50, 0], opacity: 1}}
