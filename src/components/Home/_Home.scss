@@ -64,6 +64,7 @@
         position: relative;
 
         input {
+            
             border: none;
             border-radius: 30px;
             outline: none;
@@ -95,16 +96,14 @@
             color: white;
             font-size: 2rem;
 
-            @media(max-width: 768px){
+            @media(max-width: 420px){
                 width: 45px;
                 height: 45px;
             }
 
             svg {
-                position: relative;
-                top: 5px;
-                right: 1.5px;
-                
+                margin: 0 auto;
+                padding-top: 8px;
             }
         }
     }
