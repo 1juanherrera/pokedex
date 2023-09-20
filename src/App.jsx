@@ -5,7 +5,6 @@ import Pokedex from './components/Pokedex/Pokedex'
 import Home from './components/Home/Home'
 import Footer from './components/Footer/Footer'
 import './App.css'
-import Exit from './components/Exit/EXit'
 
 
 const App = () => {
