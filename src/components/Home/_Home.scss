@@ -64,7 +64,6 @@
         position: relative;
 
         input {
-            
             border: none;
             border-radius: 30px;
             outline: none;
@@ -76,7 +75,7 @@
             padding: 15px 90px 15px 15px;
 
             @media(max-width: 768px){
-                width: 100px;
+                width: 150px;
                 height: 15px;
                 margin: 0 auto;
                 font-size: 15px;
